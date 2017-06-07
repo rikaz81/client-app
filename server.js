@@ -19,7 +19,8 @@ console.log(path.join(__dirname, 'dist'));
 app.get('/*', (req, res) => {
    //const index = path.join(__dirname, 'dist', 'index.html');
     const index = path.join('index.html');
-  res.sendFile(index);
+	res.sendFile(__dirname + '/index.html');
+  //res.sendFile(index);
 });
 
 /**
