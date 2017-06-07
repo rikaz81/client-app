@@ -18,9 +18,9 @@ console.log(path.join(__dirname, 'dist'));
 // Catch all other routes and return the index file
 app.get('/*', (req, res) => {
    //const index = path.join(__dirname, 'dist', 'index.html');
-    const index = path.join('index.html');
-	res.sendFile('src/index.html');
-  //res.sendFile(index);
+    const index = 'index.html';
+	
+  res.sendFile(index);
 });
 
 /**
