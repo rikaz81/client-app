@@ -1,0 +1,97 @@
+// URL Prefixes
+export const URL_CONST = {
+    BACK_END_HOST: 'http://localhost:3000/'
+};
+
+export const FUEL_TYPE: Array<any> = [{ "text": "Petrol" }, { "text": "Diesel" }, { "text": "Hybrid" }, { "text": "Gas" }, { "text": "Other" }];
+
+export const TRANSMISSION: Array<any> = [
+    { label: 'Automatic', value: 'A', autoSelected: true },
+    { label: 'Manual', value: 'M', autoSelected: false },
+    { label: 'Tiptronic', value: 'T', autoSelected: false },
+    { label: 'Other', value: 'O', autoSelected: false }];
+
+
+export const VECHICLE_BRANDS: Array<any> = [
+    { value: "Abarth", text: "Abarth" },
+    { value: "Acura", text: "Acura" },
+    { value: "AlfaRomeo", text: "AlfaRomeo" },
+    { value: "Ambassador", text: "Ambassador" },
+    { value: "Aprilia", text: "Aprilia" },
+    { value: "Audi", text: "Audi" },
+    { value: "Austin", text: "Austin" },
+    { value: "Bajaj", text: "Bajaj" },
+    { value: "BMW", text: "BMW" },
+    { value: "Chery", text: "Chery" },
+    { value: "Chevrolet", text: "Chevrolet" },
+    { value: "Chrysler", text: "Chrysler" },
+    { value: "Citroen", text: "Citroen" },
+    { value: "Daewoo", text: "Daewoo" },
+    { value: "Daihatsu", text: "Daihatsu" },
+    { value: "DFSK", text: "DFSK" },
+    { value: "Dimo", text: "Dimo" },
+    { value: "DskBenelli", text: "DskBenelli" },
+    { value: "DTM", text: "DTM" },
+    { value: "Ducati", text: "Ducati" },
+    { value: "FAW", text: "FAW" },
+    { value: "Fiat", text: "Fiat" },
+    { value: "Ford", text: "Ford" },
+    { value: "Foton", text: "Foton" },
+    { value: "HarleyDavidson", text: "HarleyDavidson" },
+    { value: "HeroHonda", text: "HeroHonda" },
+    { value: "Honda", text: "Honda" },
+    { value: "Hummer", text: "Hummer" },
+    { value: "Hyundai", text: "Hyundai" },
+    { value: "Isuzu", text: "Isuzu" },
+    { value: "Jaguar", text: "Jaguar" },
+    { value: "Jeep", text: "Jeep" },
+    { value: "Jialing", text: "Jialing" },
+    { value: "JMC", text: "JMC" },
+    { value: "Kawasaki", text: "Kawasaki" },
+    { value: "Kia", text: "Kia" },
+    { value: "Kinetic", text: "Kinetic" },
+    { value: "Komatsu", text: "Komatsu" },
+    { value: "Ktm", text: "Ktm" },
+    { value: "Lancia", text: "Lancia" },
+    { value: "LandRover", text: "LandRover" },
+    { value: "Lexus", text: "Lexus" },
+    { value: "Leyland", text: "Leyland" },
+    { value: "Mahindra", text: "Mahindra" },
+    { value: "MarutiSuzuki", text: "MarutiSuzuki" },
+    { value: "Mazda", text: "Mazda" },
+    { value: "Mercedes-Benz", text: "Mercedes-Benz" },
+    { value: "Micro", text: "Micro" },
+    { value: "MINI", text: "MINI" },
+    { value: "Mitsubishi", text: "Mitsubishi" },
+    { value: "MorrisGarage", text: "MorrisGarage" },
+    { value: "Nissan", text: "Nissan" },
+    { value: "Opel", text: "Opel" },
+    { value: "Perodua", text: "Perodua" },
+    { value: "Peugeot", text: "Peugeot" },
+    { value: "Porsche", text: "Porsche" },
+    { value: "Proton", text: "Proton" },
+    { value: "Renault", text: "Renault" },
+    { value: "Rover", text: "Rover" },
+    { value: "RoyalEnfield", text: "RoyalEnfield" },
+    { value: "Simca", text: "Simca" },
+    { value: "Skoda", text: "Skoda" },
+    { value: "Ssangyong", text: "Ssangyong" },
+    { value: "Subaru", text: "Subaru" },
+    { value: "Suzuki", text: "Suzuki" },
+    { value: "Tata", text: "Tata" },
+    { value: "Tesla", text: "Tesla" },
+    { value: "ThaiRungUnion", text: "ThaiRungUnion" },
+    { value: "Toyota", text: "Toyota" },
+    { value: "Triumph", text: "Triumph" },
+    { value: "Tvs", text: "Tvs" },
+    { value: "Vauxhall", text: "Vauxhall" },
+    { value: "Volkswagen", text: "Volkswagen" },
+    { value: "Volvo", text: "Volvo" },
+    { value: "Willys", text: "Willys" },
+    { value: "Yamaha", text: "Yamaha" },
+    { value: "Zotye", text: "Zotye" }];
+
+
+export const VECHICLE_CONDITIONS: Array<any> = [{ text: "New", value: "N" }, { text: "Used", value: "U" }, { text: "Reconditioned", value: "R" }];
+
+

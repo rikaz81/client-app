@@ -1,0 +1,151 @@
+<section id="container" class="hr-menu">
+
+  <!--header start-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Find a perfect Vechicles</a>
+
+      </div>
+
+
+
+      <div class="navbar-form navbar-left">
+        <select class="form-control" id="brand" [(ngModel)]="brand" placeholder="Vechicle Brand" id="brand">   
+            <option value="" selected>--All Brands--</option>                   
+            <option *ngFor="let brand of brands"  value="{{brand.value}}">{{brand.text}}</option>   
+                
+        </select>
+        <span class="icon-bar"></span>
+        <select class="form-control" id="condition" [(ngModel)]="condition" placeholder="Condition" name="condition">    
+                <option value="" selected >--All Conditions--</option>
+                
+                   <option *ngFor="let condition of conditions"  value="{{condition.value}}">{{condition.text}}</option>  
+             
+        </select>
+        <span class="icon-bar"></span>
+        <select class="form-control" id="transmission" name="transmission" placeholder="Transmission" name="transmission">    
+              <option value="A" >--All Transmission--</option>
+               <option *ngFor="let trs of transmissions"  value={{trs.value}}>{{trs.label}}</option>             
+        </select>
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Search Vechicle Model">
+        <button type="submit" class="btn btn-default">Search</button> </div>
+
+
+      <!--</form>-->
+      <ul class="nav navbar-nav navbar-right" *ngIf="!adminUser">
+        <li><a [routerLink]="['/','login']">Admin <label class="glyphicon glyphicon-user"></label> </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--header end-->
+
+  <!--main content start-->
+  <section id="main-content">
+    <section class="wrapper">
+
+
+      <div class="row">
+        <!--sidebar start-->
+        <div class="col-md-2 hidden-sm">
+          <app-left-side-banner></app-left-side-banner>
+
+
+        </div>
+        <!--sidebar end-->
+
+        <!-- page start-->
+        <div class="col-sm-12 col-md-10">
+          <!--breadcrumbs start -->
+          <div class="container-fluid">
+
+
+
+            <div class="alert alert-dismissible alert-warning" *ngIf="(vechicles | filter:searchTerm:brand:condition).length == 0">
+
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <p>Sorry!, we are unable to find Vechicles for the searched criteria <span class="alert-link">{{searchTerm}}</span>                Please refine your search and try again.</p>
+            </div>
+
+            <div class="alert alert-dismissible alert-success" *ngIf="(vechicles | filter:searchTerm:brand:condition).length !== 0">
+
+
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <p>Found Vechicles <span class="alert-link">{{(vechicles | filter:searchTerm:brand:condition).length}}</span>.
+                available for sale.</p>
+            </div>
+
+
+
+
+
+            <div class="row">
+
+
+
+              <div class="col-md-12" *ngFor="let vechicle  of vechicles  | filter:searchTerm:brand:condition">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="{{vechicle.imgUrl}}" class="img-responsive">
+                      </div>
+                      <div class="col-md-8">
+
+                        <h4>{{vechicle.brand}} - {{vechicle.vechicleModel}} {{vechicle.modelYear}}</h4>
+                        <div style="font-size: 14px;"><label>Mileage :</label>{{vechicle.mileAge}} [{{vechicle.condition}}]</div>
+                        <div style="font-size: 14px;"><label>Year :</label> {{vechicle.modelYear}} <label> Transmission :</label>{{vechicle.transmission}}
+                        </div>
+
+
+                        <div style="font-size: 14px;"><label>Price :</label> LKR. {{vechicle.price}}
+                          <label *ngIf="vechicle.priceNegotiable">Price Negotiable</label>
+                        </div>
+
+                        <div class="glyphicon glyphicon-user"> {{vechicle.contactName}},{{vechicle.contactPlace}}
+                          <label class="glyphicon glyphicon-phone-alt"> {{vechicle.contactPhone}}</label>
+                        </div>
+                        <div data-toggle="collapse" data-target="#demo"> More Info <span class="badge">>>></span></div>
+                        <div id="demo" class="collapse" style="font-size: 14px;">{{vechicle.description}}</div>
+
+                        <div *ngIf="adminUser">
+                          <br>
+
+                          <button class="btn btn-danger btn-xs glyphicon glyphicon-remove-circle" (click)="deleteVechicleFromSale(vechicle.id)">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                Delete</button>
+
+                          <button class="btn btn-success btn-xs glyphicon glyphicon-remove-circle" (click)="editVechicleFromSale(vechicle.id)">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                Edit</button>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+        <!-- page end-->
+      </div>
+
+    </section>
+  </section>
+  <!--main content end-->
+  <!--footer start-->
+
+</section>
