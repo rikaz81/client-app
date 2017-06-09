@@ -13,9 +13,13 @@ export class LayoutComponent implements OnInit {
   adminUser: boolean = false;
   constructor(private router: Router, private userService: UserService) {
     this.adminUser = this.userService.isAuthorized();
+
   }
 
   ngOnInit() {
+    if (!this.adminUser) {
+      this.router.navigate(['/', 'guest-page']);
+    }
   }
 
 
