@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'src')));
 
 //console.log(path.join(__dirname, 'dist'));
 console.log(path.join(__dirname, 'src'));
-
+console.log('__dirname',__dirname);
 // Catch all other routes and return the index file
 app.get('/*', (req, res) => {
    const index = path.join(__dirname, 'dist', 'index.html');   
