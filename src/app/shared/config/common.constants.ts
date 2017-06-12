@@ -1,7 +1,6 @@
 // URL Prefixes
 export const URL_CONST = {    
-    BACK_END_HOST: 'https://pacific-sands-42769.herokuapp.com/',
-    TEST_BACK_END_HOST: 'http://localhost:3000/'
+    BACK_END_HOST: 'https://pacific-sands-42769.herokuapp.com/'
 };
 
 export const FUEL_TYPE: Array<any> = [{ "text": "Petrol" }, { "text": "Diesel" }, { "text": "Hybrid" }, { "text": "Gas" }, { "text": "Other" }];
