@@ -546,7 +546,7 @@ module.exports = "<section id=\"container\" class=\"hr-menu\">\r\n\r\n  <!--head
 // URL Prefixes
 // URL Prefixes
 var URL_CONST = {
-    BACK_END_HOST: 'http://localhost:3000/'
+    BACK_END_HOST: 'https://pacific-sands-42769.herokuapp.com/'
 };
 var FUEL_TYPE = [{ "text": "Petrol" }, { "text": "Diesel" }, { "text": "Hybrid" }, { "text": "Gas" }, { "text": "Other" }];
 var TRANSMISSION = [
